@@ -2,7 +2,7 @@
  * @Author: Rex Joush
  * @Date: 2023-09-23 23:17:26
  * @LastEditors: Rex Joush
- * @LastEditTime: 2023-09-23 23:18:10
+ * @LastEditTime: 2023-09-23 23:21:21
  */
 package hw1;
 
@@ -24,10 +24,10 @@ public class Solution {
         initMap(groupMap, passwdMap);
         Group group = groupMap.get(groupID);
         if (group == null) {
-            System.out.println(groupID + " = Group not found.")
+            System.out.println(groupID + " = Group not found.");
         }
         // 4 = adm: syslog(104) amf(1000)
-        System.out.print(groupID + " = " + group.groupId + ": ")
+        System.out.print(groupID + " = " + group.groupId + ": ");
         for (String g : group.gid) {
             Integer uid = passwdMap.get(g);
             if (uid != null) {
